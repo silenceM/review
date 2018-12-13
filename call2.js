@@ -9,7 +9,7 @@ Function.prototype.call2 = function (context) {
   delete context.fn
   return result
 }
-
+var value = 2
 var foo = {
   value: 1
 }
@@ -19,5 +19,5 @@ function bar(name, age) {
   console.log(age)
   console.log(this.value)
 }
-
+bar.call2(null)
 bar.call2(foo, 'silence', 20)
